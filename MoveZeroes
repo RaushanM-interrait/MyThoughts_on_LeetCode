@@ -1,0 +1,38 @@
+Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+Note that you must do this in-place without making a copy of the array.
+
+1. ak integer array hai nums ab bol raha hai ki is array me jitney v 0s hai 
+2. usko end me rakhna hai but ak chije dhayn deni hai jis v order me non-zero hai uske order maintain hone chchaiye 
+3. qns khud kah raha hai in-place mtlb tum koi v new array nhi le skte yad rakhna 
+4. usi arry me sb krne hai
+
+ 
+
+Example 1:
+Input: nums = [0,1,0,3,12]
+Output: [1,3,12,0,0]
+1. mai kya kr skta hu ki check krunga ki zero kaha hai like nums[i]==0 and ye sure 
+krenge ki kya o nums.Lengths-1 ke pas to nhi n hai agr hai then keep as it is
+2. then us 0 ko count krenge uske bad 
+3. kya aesa kr skte hai ki jitna v count hua like man lo 
+then ak for loop lete hai like for(int j=1; j<=zerocount;j++)
+phir jitney v non-zero hai uske agge ki trf move kre 
+4. and phir end me jitna v 0 ho usko rakh de 
+
+ya koi to sorting hoti hai jo suru se element ko uthkr end me le jati hai aesa koi to sorting hai yad nhi aa raha hai
+
+Example 2:
+
+Input: nums = [0]
+Output: [0]
+ 
+
+Constraints:
+
+1 <= nums.length <= 104
+-231 <= nums[i] <= 231 - 1
+ 
+
+1. nums.Length min 1 hai jisse ye pata chal raha hai nums kabhi v null nhi hoga and max value 10000
+2. nums me element -ve v ho skta hai and +ve v 

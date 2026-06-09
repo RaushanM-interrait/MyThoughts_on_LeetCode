@@ -1,0 +1,32 @@
+Given an array nums of size n, return the majority element.
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+my understanding
+1.Qns kah raha hai ki ak nums array hai jiska size n hai
+2. or bol raha hai ki majority element ko return kro 
+3.majority element ka mtlb hai jo n/2 times se jada bar appear hai example: man lo n=10 hai then 10/2=5 times se jada jo hoga use return ktna hai 
+4. ye hame man kr chalna hai ki majority element array me hoga  
+ 
+
+Example 1:
+Input: nums = [3,2,3]
+Output: 3
+1.pahla step m=nums.Length/2
+2.ab ak count=0 variable lete hai 
+3.or chek krte hai kya elements ki occurance more than m hai if yes then return those element
+
+Example 2:
+
+Input: nums = [2,2,1,1,1,2,2]
+Output: 2
+ 
+
+Constraints:
+n == nums.length
+1 <= n <= 5 * 104
+-109 <= nums[i] <= 109
+
+
+1. n ki value ye fixed hai ki nums.length ki equal hogi
+2. and n i value minimum 1 hoga maximum 50000
+3. array ki element jo hoga -ve v ho skta hai like -99999999 0r +ve v ho skte hai +99999999

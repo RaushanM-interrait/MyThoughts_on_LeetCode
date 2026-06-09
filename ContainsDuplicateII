@@ -1,0 +1,42 @@
+Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+my understanding:
+1.ak nums integer array diya hua hai isk mtlb isme string nhi milega yad rakhna
+2. sath me ak integer k diya hua hai jo ki ab tak ke qns se hatke hai difference ye hai ki k ki vakue diya hua hai
+or yhi ans ko alg banta hai
+3. true us condtion me return krna hai  ydi two alg alg indices i and j array me ho or  kuchh is trah ki 
+4. nums[i] == nums[j] and abs(i-j) <=k ho
+5. stat-4 se ye lg raha hai ki qns ye hits de raha hai ki tum nested for loop use kr lo and ye check kro ki i & j do alg alg indicies lo
+6 check kro  nums[i] == nums[j] and abs(i-j) <=k agar ye conditions milta hai to hi true retun kro nhi to flase kro
+7. ab example se samjhte hai 
+8. ak chije confim krne hai mujhe ki kya koi ak ye conditions ko fulfill nhi kr raha then false return krna hai 
+9. ya ak elements se conditions satisfy nhi hui then next element ke liye jate 
+ 
+
+Example 1:
+
+Input: nums = [1,2,3,1], k = 3
+Output: true
+Example 2:
+
+1.hame yaha bas ye nums[i] == nums[j] and abs(i-j) <=k check krne hai or kuchh nhi
+2.maine 1st element 1 liya or compare krna start kr diya hame sirf duplicate dhudhne hai or conditios ko fulfill kre 
+3. so last me 1 mila or yaha i=0 and j=3 hai and abs(i-j)<=K(3) hai so ye true hoga 
+
+Input: nums = [1,2,3,1,2,3], k = 2
+Output: false
+ 
+1. ab yaha pr 1st element liya jo 1 , i=0 hai and dhudhna start kiya  then j=3 pe mila 
+2. Now ab abs(i-j)<=K(3) ye conditions check krte hai (0-3)=<2 --flase
+3. ab i=1 , 2 ke liye then j=4 pe mila then (4-2)=<2 ye to true hai so iske given output se ye samjh aa raha hai ki 
+4. agar koi ak v element ke liye false hui means ohi se return hoga next element ke liye nhi jayega
+
+Constraints:
+
+1 <= nums.length <= 105
+-109 <= nums[i] <= 109
+0 <= k <= 105
+
+1. nums.Length mini 1 hoga means array empty nhi hoga and max 100000 hoga
+2. nums ki element -ve v ho skti hai and +ve v (-99999999 to + 9999999)
+3. k min 0 v ho skta hai and maximum 100000
+

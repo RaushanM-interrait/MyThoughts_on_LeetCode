@@ -1,0 +1,51 @@
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+my understanding:
+1. ak integer array hai jiska nam nums hai or qns kah raha hai ki jb v milega isme kuchh n kuchh element hoga
+2. empty to hoga nhi hoga yad rakhna 
+3. bol raha hai ki every element two bar milega us array me 
+4. sirf kisi ak ko chhorkar and hame us single one ko hi dhudhna hai
+5. ab hame solution kuchh is trh banne hai ki uski runtime complexity linear ho
+6. agar hame extra space jarurat pdta hai then ham constant extra space use krna hai 
+ 
+
+Example 1:
+Input: nums = [2,2,1]
+Output: 1
+1. ab is example me 2 twice hai so single hai 1 so yhi output hai
+
+Example 2:
+
+Input: nums = [4,1,2,1,2]
+
+Output: 4
+
+1. is array me 1 ,2 twice hai so single me only 4 hai isliye 4 output hai
+
+Example 3:
+
+Input: nums = [1]
+
+Output: 1
+
+1. yaha par only ak hi element hai so ans ohi hoga
+
+ 
+
+Constraints:
+
+1 <= nums.length <= 3 * 104
+-3 * 104 <= nums[i] <= 3 * 104
+
+
+1. Jo array ki length hoga minimum 1 ho skta hai and maximum 30000
+2. array ki jo elements hai -ve v ho skta hai and +Ve v ho skta hai 
+
+pseudocode:
+Input: nums = [4,1,2,1,2]
+
+tum chchate ho ki nested for lopp lagao 
+and usme ak variable intro kru count and then jiska count 1 hai usko hi rturn kru 
+
+

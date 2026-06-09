@@ -1,0 +1,61 @@
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+ my understanding
+1.hame ak price array diya hua hai jisme ye kaha gaya hai ki price ak stock ki hai
+2. jisko day-0 se day-n tak absorb kiya gaya hai ki uski pirce kon sa day up gaya kon sa day down gaya  
+3. hame is records ko dekhte huye pahle stock khridna hai and then same day to nhi use bad kavi v sell krna hai but  
+4. conditions ye hai hame maximum profit dena hai agr -ve me jata hai to 0 retun krna hai  
+
+Example 1:
+
+Input: prices = [7,1,5,3,6,4]
+Output: 5
+
+soln. 
+Days   0  1 2 3 4 5
+prices 7  1 5 3 6 4
+
+1. agar ham us din stock kharide jis din uska cost kam ho like Day-1
+2. ak or same day usko sell nhi kr skte hai 
+3. so kisi or din sell krenge jis din stock ka cost heigh ho jaise ki Day-4
+4. ab Day4cost - Day1cost=-1=5 
+5. yhi output hua
+
+
+Example 2:
+
+Input: prices = [7,6,4,3,1]
+Output: 0
+soln. 
+Days   0  1 2 3 4
+prices 7  6 4 3 1 
+
+1.yaha par same day stock kharid kr sell nhi kr skte so
+2. Day3 pe 3 me stock krida and Day-4 pe stock sell kiya
+3. loss hua then 0 output hoga 
+
+  
+
+Constraints:
+
+1 <= prices.length <= 105
+0 <= prices[i] <= 104
+
+
+1. total num of price in prices arry me  minimum 1 ho skta hai maximum 105 tak ho skta hai
+2. but actual price 0 v ho skta hai or maxi 104 ta hi ja skta hai 
+
+Input: prices = [7,1,5,3,6,4]
+Output: 5
+pseudo:
+1. ab for loop lo (int day=0 ; day<=prices.length-1; day++)
+2. ak variable banaya buystock=0, prices[day]
+if buystock=0 hai means stock kharidna hai 
+ab isme se jo v sbse small price ka hoga and uski index!=prices.length-1 then usko buy krenge and uska index v store krneg like buythindex
+3. and phir check krenge  if buystock=1 hai means sell krna hai then find krenge jis indexday pe kharida tha use age ki indexday me jo v hoga uska diff nikalnge or usme se jo max hoga ohi output hoga    
+
+

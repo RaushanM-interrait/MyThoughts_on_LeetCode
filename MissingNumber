@@ -1,0 +1,31 @@
+Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+1.ak nums array diya hua hai and ye bta raha hai isme jo v element hai distinct duplicate nhi hoga
+2. or us number ki jo range hogi 0 se n tak hogi 
+3. ab hame ohi number return krna hai us range mese jo missing hai us arry me  
+for 
+Example 1:
+
+Input: nums = [3,0,1]
+
+Output: 2
+1. yaha par 0-3 tak range diya hua hai ab hame isme se jo missing hai use retun krna hai
+2. ak bate mujhe thoda doubt ho raha hai ki kya isme single elements hi missing hai ya double 
+3. but qns me ye clear kiya hai ki return only number not numbers so single hi return hoga
+4. ab kya kr skate hai pahle length nikalo us array ki like isme 3 hai
+5. ab allsum= (1+2+3) ye hoga 6 or ye v formula use kr skte hai n(n+1)/2
+6 ab jo array me diya hua hai usko sum krte hai like givensum= 3+0+1=4
+7 allsum-givensum ohi missing 
+
+ 
+
+Constraints:
+
+n == nums.length
+1 <= n <= 104
+0 <= nums[i] <= n
+All the numbers of nums are unique.
+ 
+1.n ki size hoga nums.length hoga
+2.oe ye bat dhayn dene wali hai ki n ka min 1 hai maz 10000 it menas
+array kabhi v empty nhi hogi mind it
+3. arry ki elements 0 se include ho ste hai and max n tak rakh skta hai element 

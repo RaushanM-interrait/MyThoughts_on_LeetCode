@@ -1,0 +1,79 @@
+349. Intersection of Two Arrays
+Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.
+
+ 
+
+Example 1:
+
+Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2]
+Example 2:
+
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [9,4]
+Explanation: [4,9] is also accepted.
+ 
+
+Constraints:
+
+1 <= nums1.length, nums2.length <= 1000
+0 <= nums1[i], nums2[i] <= 1000
+
+My thoughts
+
+1. do arrays diya hua hai nums1 and nums2 jo ki in array hai means app string expect nhi kr skte  
+2. ab kah raha hai ki dodno arry ka intersection niakalo 
+3. mai jo samjhta hu intersection ko ki dono me jo common ho or disticnt ho ohi dono ka intersection hota hai 
+4. or qns kah v raha hai ki result me element unique hona chchaiye 
+6. or sbse badi bat ki us element ka order kuchh v ho skta hai  
+
+Example: 1
+Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2]
+Given that 
+1. nums1 = [1,2,2,1] and nums2 =[2,2]
+ab iska Intersection hoga common in both side  to chalte hai one by one
+2. 
+1 dono array me nhi hai --> false
+2 dono array me hai --> true
+2 dono array me hai --> true 
+1 dono array me nhi hai --> false
+
+3. ab qns ke a/c 2 dono array me common hai but duplicates v hai so
+single time lete hai isliye only 2 hi output hoga 
+
+Example 2:
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [9,4]
+
+1. one by one chalte hai 
+
+4 dono me common hai --> true 
+9 dono me common hai --> true
+5 dono me common ni hai --> false 
+
+2. ab yaha par ye dekh skte hai ki kon se array ki length kam hai usse agar chalte hai then traverse kam krna hoga 
+3. kam step me ho jayega 
+4. 4, 9 hoga ans 
+
+Constraints:
+1 <= nums1.length, nums2.length <= 1000
+dono array ki length min 1 hoga means usme kuchh na kuchh element hoga hi and max 1000 hoga 
+
+0 <= nums1[i], nums2[i] <= 1000
+dono array me element 0 or +ve honge 
+
+--Pseudo code ----------------
+bruteforce
+1. ak for lopp lete hai and ak while loop
+2. ham bahar ke loop se ak element uthe hai and andar ke loop me 
+ham dusra arry ko traverse krenge 
+like Input: nums1 = [1,2,2,1], nums2 = [2,2]
+
+nums1 ka 1 liye outer loop se and inner lopp while jb tak false na ho jayega tbtak chalge and check krenga ki kya 
+1 ke hai nums2 me agr ak v mila to then break kro outer loop se dursa element uthao and do the same as it is and 
+last me jo v common mila hai use return kr do but yad rakhn distinct hona chahiye 
+
+
+ 
+
